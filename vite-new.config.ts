@@ -17,7 +17,7 @@ export default defineConfig(({ command, mode }) => {
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control",
       },
     },
-    base: "/", // 修复：在微前端环境中使用根路径
+    base: "/",
     define: {
       'process.env.NODE_ENV': JSON.stringify(mode),
     },
@@ -25,16 +25,15 @@ export default defineConfig(({ command, mode }) => {
 
   if (isProduction) {
     // 生产环境构建为 UMD 格式供 qiankun 2.7.2 使用
-    // 主应用已升级到 React 18，可以安全地外部化 React
     return {
       ...baseConfig,
       build: {
         target: "es2015",
         lib: {
-          name: "heroui-app",
+          name: "heroui-app", // 修正：与主应用注册的名称一致 (heroui-app 不是 heorui-app)
           entry: "./src/main.tsx",
           formats: ["umd"],
-          fileName: () => "heroui-app.js",
+          fileName: () => "heroui-app.js", // 修正文件名
         },
         rollupOptions: {
           external: ["react", "react-dom"],
@@ -44,7 +43,7 @@ export default defineConfig(({ command, mode }) => {
               "react-dom": "ReactDOM",
             },
             format: "umd",
-            name: "heroui-app",
+            name: "heroui-app", // 修正全局变量名
             inlineDynamicImports: true,
           },
         },
