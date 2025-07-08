@@ -18,6 +18,7 @@ function App() {
       <Route element={<AboutPage />} path="/about" />
       <Route element={<TableWithFilters />} path="/table-with-filters" />
       <Route element={<SettingLayout />} path="/setting-layout" />
+      <Route element={<SettingLayout />} path="/two-columns-checkout" />
     </Routes>
   );
 }
