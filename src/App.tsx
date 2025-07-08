@@ -7,6 +7,7 @@ import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
 import TableWithFilters from "./pages/table-with-filters";
 import SettingLayout from "./pages/setting-layout";
+import TwoColumnsCheckout from "./pages/two-columns-checkout";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <Route element={<AboutPage />} path="/about" />
       <Route element={<TableWithFilters />} path="/table-with-filters" />
       <Route element={<SettingLayout />} path="/setting-layout" />
-      <Route element={<SettingLayout />} path="/two-columns-checkout" />
+      <Route element={<TwoColumnsCheckout />} path="/two-columns-checkout" />
+      {/* pricing-with-most-popular-tier-highlighted */}
     </Routes>
   );
 }
