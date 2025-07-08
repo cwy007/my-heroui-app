@@ -6,6 +6,7 @@ import PricingPage from "@/pages/pricing";
 import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
 import TableWithFilters from "./pages/table-with-filters";
+import SettingLayout from "./pages/setting-layout";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route element={<BlogPage />} path="/blog" />
       <Route element={<AboutPage />} path="/about" />
       <Route element={<TableWithFilters />} path="/table-with-filters" />
-      <Route element={<TableWithFilters />} path="/setting-layout" />
+      <Route element={<SettingLayout />} path="/setting-layout" />
     </Routes>
   );
 }
