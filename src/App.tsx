@@ -16,6 +16,7 @@ function App() {
       <Route element={<BlogPage />} path="/blog" />
       <Route element={<AboutPage />} path="/about" />
       <Route element={<TableWithFilters />} path="/table-with-filters" />
+      <Route element={<TableWithFilters />} path="/setting-layout" />
     </Routes>
   );
 }

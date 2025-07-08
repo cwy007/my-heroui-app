@@ -566,6 +566,7 @@ export default function Component() {
   return (
     <div className="h-full w-full p-6">
       {topBar}
+
       <Table
         isHeaderSticky
         aria-label="Example table with custom cells, pagination and sorting"
