@@ -8,6 +8,7 @@ import AboutPage from "@/pages/about";
 import TableWithFilters from "./pages/table-with-filters";
 import SettingLayout from "./pages/setting-layout";
 import TwoColumnsCheckout from "./pages/two-columns-checkout";
+import CenteredSignUpWithTwoSteps from "./pages/centered-sign-up-with-two-steps";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <Route element={<TableWithFilters />} path="/table-with-filters" />
       <Route element={<SettingLayout />} path="/setting-layout" />
       <Route element={<TwoColumnsCheckout />} path="/two-columns-checkout" />
-      {/* pricing-with-most-popular-tier-highlighted */}
+      {/* centered-sign-up-with-two-steps */}
+      <Route element={<CenteredSignUpWithTwoSteps />} path="/centered-sign-up-with-two-steps" />
     </Routes>
   );
 }
