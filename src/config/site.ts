@@ -6,7 +6,7 @@ export const siteConfig = {
   navItems: [
     {
       label: "首页",
-      href: "/blog",
+      href: "/",
     },
     {
       label: "heroui.com",

@@ -6,15 +6,14 @@ import { button as buttonStyles } from "@heroui/theme";
 // import { siteConfig } from "@/config/site";
 // import { title, subtitle } from "@/components/primitives";
 // import { GithubIcon } from "@/components/icons";
-import DefaultLayout from "@/layouts/default";
+// import DefaultLayout from "@/layouts/default";
 import { routes } from "@/config/router";
 // import { Card, CardBody } from "@heroui/card";
 
 export default function IndexPage() {
   return (
-    <DefaultLayout>
-      <section className="flex flex-row items-center justify-center gap-4 py-8 md:py-10">
-        {/* <div className="inline-block max-w-4xl text-center justify-center">
+    <section className="min-h-[calc(100vh-8rem)] flex flex-row items-center justify-center gap-4 py-8 md:py-10">
+      {/* <div className="inline-block max-w-4xl text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
           <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
           <br />
@@ -24,26 +23,26 @@ export default function IndexPage() {
           </div>
         </div> */}
 
-        {routes.map((route) => (
-          // <Card>
-          //   <CardBody className="min-w-fit box-border p-4">
-              <Link
-                key={route.label}
-                href={route.href}
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                  class: "min-w-fit",
-                })}
-              >
-                {route.label}
-              </Link>
-          //   </CardBody>
-          // </Card>
-        ))}
+      {routes.map((route) => (
+        // <Card>
+        //   <CardBody className="min-w-fit box-border p-4">
+        <Link
+          key={route.label}
+          href={route.href}
+          className={buttonStyles({
+            color: "primary",
+            radius: "full",
+            variant: "shadow",
+            class: "min-w-fit",
+          })}
+        >
+          {route.label}
+        </Link>
+        //   </CardBody>
+        // </Card>
+      ))}
 
-        {/* <div className="flex gap-3">
+      {/* <div className="flex gap-3">
           <Link
             isExternal
             className={buttonStyles({
@@ -65,14 +64,13 @@ export default function IndexPage() {
           </Link>
         </div> */}
 
-        {/* <div className="mt-8">
+      {/* <div className="mt-8">
           <Snippet hideCopyButton hideSymbol variant="bordered">
             <span>
               Get started by editing <Code color="primary">pages/index.tsx</Code>
             </span>
           </Snippet>
         </div> */}
-      </section>
-    </DefaultLayout>
+    </section>
   );
 }
