@@ -1,30 +1,49 @@
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
+// import { Snippet } from "@heroui/snippet";
+// import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+// import { siteConfig } from "@/config/site";
+// import { title, subtitle } from "@/components/primitives";
+// import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { routes } from "@/config/router";
+// import { Card, CardBody } from "@heroui/card";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
+      <section className="flex flex-row items-center justify-center gap-4 py-8 md:py-10">
+        {/* <div className="inline-block max-w-4xl text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
           <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
           <br />
-          <span className={title()}>
-            websites regardless of your design experience.
-          </span>
+          <span className={title()}>websites regardless of your design experience.</span>
           <div className={subtitle({ class: "mt-4" })}>
             Beautiful, fast and modern React UI library.
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex gap-3">
+        {routes.map((route) => (
+          // <Card>
+          //   <CardBody className="min-w-fit box-border p-4">
+              <Link
+                key={route.label}
+                href={route.href}
+                className={buttonStyles({
+                  color: "primary",
+                  radius: "full",
+                  variant: "shadow",
+                  class: "min-w-fit",
+                })}
+              >
+                {route.label}
+              </Link>
+          //   </CardBody>
+          // </Card>
+        ))}
+
+        {/* <div className="flex gap-3">
           <Link
             isExternal
             className={buttonStyles({
@@ -44,16 +63,15 @@ export default function IndexPage() {
             <GithubIcon size={20} />
             GitHub
           </Link>
-        </div>
+        </div> */}
 
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <Snippet hideCopyButton hideSymbol variant="bordered">
             <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
+              Get started by editing <Code color="primary">pages/index.tsx</Code>
             </span>
           </Snippet>
-        </div>
+        </div> */}
       </section>
     </DefaultLayout>
   );

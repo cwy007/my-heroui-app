@@ -5,24 +5,12 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
+      label: "首页",
       href: "/blog",
     },
     {
-      label: "About",
-      href: "/about",
+      label: "heroui.com",
+      href: "https://heroui.com",
     },
   ],
   navMenuItems: [
