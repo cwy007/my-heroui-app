@@ -3,6 +3,7 @@ import TableWithFilters from "@/pages/table-with-filters";
 import SettingLayout from "@/pages/setting-layout";
 import TwoColumnsCheckout from "@/pages/two-columns-checkout";
 import CenteredSignUpWithTwoSteps from "@/pages/centered-sign-up-with-two-steps";
+import HerouiNestedSidebar from "@/pages/heroui-nested-sidebar-ai-generate";
 
 export const routes = [
   {
@@ -29,5 +30,10 @@ export const routes = [
     label: "/centered-sign-up-with-two-steps",
     href: "/centered-sign-up-with-two-steps",
     component: CenteredSignUpWithTwoSteps,
+  },
+  {
+    label: "/heroui-nested-sidebar",
+    href: "/heroui-nested-sidebar",
+    component: HerouiNestedSidebar,
   },
 ]
