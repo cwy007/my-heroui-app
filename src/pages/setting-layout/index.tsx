@@ -21,6 +21,7 @@ import SidebarDrawer from "./sidebar-drawer";
 import Sidebar from "./sidebar";
 
 import {items} from "./items";
+import DefaultLayout from "@/layouts/default";
 
 /**
  * This example requires installing the `usehooks-ts` and `lodash` packages.
@@ -55,7 +56,7 @@ export default function Component() {
     <div className="flex h-dvh w-full gap-4">
       {/* Sidebar */}
       <SidebarDrawer
-        className={cn("min-w-[288px] rounded-lg", {"min-w-[76px]": isCollapsed})}
+        className={cn("min-w-[288px] rounded-lg", { "min-w-[76px]": isCollapsed })}
         hideCloseButton={true}
         isOpen={isOpen}
         onOpenChange={onOpenChange}
@@ -65,7 +66,7 @@ export default function Component() {
             "will-change relative flex h-full w-72 flex-col bg-default-100 p-6 transition-width",
             {
               "w-[83px] items-center px-[6px] py-6": isCollapsed,
-            },
+            }
           )}
         >
           <div
@@ -83,7 +84,7 @@ export default function Component() {
             >
               Acme
             </span>
-            <div className={cn("flex-end flex", {hidden: isCollapsed})}>
+            <div className={cn("flex-end flex", { hidden: isCollapsed })}>
               <Icon
                 className="cursor-pointer dark:text-primary-foreground/60 [&>g]:stroke-[1px]"
                 icon="solar:round-alt-arrow-left-line-duotone"
@@ -99,7 +100,7 @@ export default function Component() {
               size="sm"
               src="https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/avatars/e1b8ec120710c09589a12c0004f85825.jpg"
             />
-            <div className={cn("flex max-w-full flex-col", {hidden: isCollapsed})}>
+            <div className={cn("flex max-w-full flex-col", { hidden: isCollapsed })}>
               <p className="text-small font-medium text-foreground">Kate Moore</p>
               <p className="text-tiny font-medium text-default-400">Customer Support</p>
             </div>
@@ -148,7 +149,7 @@ export default function Component() {
                   "justify-start truncate text-default-600 data-[hover=true]:text-foreground",
                   {
                     "justify-center": isCollapsed,
-                  },
+                  }
                 )}
                 isIconOnly={isCollapsed}
                 startContent={
