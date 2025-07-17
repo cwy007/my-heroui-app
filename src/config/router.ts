@@ -4,8 +4,14 @@ import SettingLayout from "@/pages/setting-layout";
 import TwoColumnsCheckout from "@/pages/two-columns-checkout";
 import CenteredSignUpWithTwoSteps from "@/pages/centered-sign-up-with-two-steps";
 import HerouiNestedSidebar from "@/pages/heroui-nested-sidebar-ai-generate";
+import NewcoreForm from "@/pages/newcore-form";
 
 export const routes = [
+  {
+    label: "/newcore-form",
+    href: "/newcore-form",
+    component: NewcoreForm,
+  },
   {
     label: "/pricing",
     href: "/pricing",
