@@ -1,9 +1,9 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {HeroUIProvider} from "@heroui/react";
 import App from "./App";
 import "./styles.css";
+import DefaultLayout from "@/layouts/default";
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
 //   <React.StrictMode>
@@ -17,8 +17,11 @@ import "./styles.css";
 
 export default function MultiStepWizard() {
   return (
-    <div className="w-screen h-screen p-8 flex items-start justify-center">
-      <App />
-    </div>
+    <DefaultLayout>
+
+      <div className="w-screen h-screen p-8 flex items-start justify-center">
+        <App />
+      </div>
+    </DefaultLayout>
   );
 }

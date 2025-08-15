@@ -14,7 +14,7 @@ import DefaultLayout from "@/layouts/default";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="min-h-[calc(100vh-8rem)] flex flex-row items-center justify-center gap-4 py-8 md:py-10">
+      <section className="min-h-[calc(100vh-8rem)] flex flex-wrap items-center justify-center gap-4 py-8 md:py-10">
         {/* <div className="inline-block max-w-4xl text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
           <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
@@ -24,25 +24,26 @@ export default function IndexPage() {
             Beautiful, fast and modern React UI library.
           </div>
         </div> */}
-
-        {routes.map((route) => (
-          // <Card>
-          //   <CardBody className="min-w-fit box-border p-4">
-          <Link
-            key={route.label}
-            href={route.href}
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-              class: "min-w-fit",
-            })}
-          >
-            {route.label}
-          </Link>
-          //   </CardBody>
-          // </Card>
-        ))}
+        <div className="flex flex-wrap gap-4">
+          {routes.map((route) => (
+            // <Card>
+            //   <CardBody className="min-w-fit box-border p-4">
+            <Link
+              key={route.label}
+              href={route.href}
+              className={buttonStyles({
+                color: "primary",
+                radius: "full",
+                variant: "shadow",
+                class: "min-w-fit",
+              })}
+            >
+              {route.label}
+            </Link>
+            //   </CardBody>
+            // </Card>
+          ))}
+        </div>
 
         {/* <div className="flex gap-3">
           <Link
