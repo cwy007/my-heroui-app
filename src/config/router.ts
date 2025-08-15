@@ -6,8 +6,14 @@ import CenteredSignUpWithTwoSteps from "@/pages/centered-sign-up-with-two-steps"
 import HerouiNestedSidebar from "@/pages/heroui-nested-sidebar-ai-generate";
 import NewcoreForm from "@/pages/newcore-form";
 import SimpleLogin from "@/pages/simple-login";
+import MultiStepWizard from "@/pages/multi-step-wizard";
 
 export const routes = [
+  {
+    label: "/multi-step-wizard",
+    href: "/multi-step-wizard",
+    component: MultiStepWizard,
+  },
   {
     label: "/simple-login",
     href: "/simple-login",
