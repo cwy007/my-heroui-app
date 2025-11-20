@@ -10,6 +10,32 @@ import ChooseAddressForm from "./choose-address-form";
 import ReviewAndPaymentForm from "./review-and-payment-form";
 import MultistepNavigationButtons from "./multistep-navigation-buttons";
 
+
+/**
+ * 这段代码定义了一个名为 variants 的对象，通常用于动画库（如 Framer Motion）中，来描述不同动画状态下元素的样式变化。下面逐项解释：
+
+enter: 是一个函数，接收一个 direction（方向，类型为 number），返回一个对象。这个对象定义了元素进入时的动画初始状态：
+
+y: 垂直位移。如果 direction > 0，则向下偏移 30 像素，否则向上偏移 30 像素。
+opacity: 透明度为 0，即完全透明。
+center: 是一个对象，定义了元素在动画中间（或“居中”）时的状态：
+
+zIndex: 1: 堆叠顺序较高，显示在上面。
+y: 0: 没有垂直位移，回到原位。
+opacity: 1: 完全不透明。
+exit: 也是一个函数，接收 direction，返回一个对象，定义元素离开时的动画状态：
+
+zIndex: 0: 堆叠顺序降低。
+y: 如果 direction < 0，则向下偏移 30 像素，否则向上偏移 30 像素（与 enter 相反）。
+opacity: 0: 透明度为 0，逐渐消失。
+用途说明：
+在 React + Framer Motion 项目中，variants 通常用于 <motion.div variants={variants} />，根据动画阶段（如 enter、center、exit）自动切换对应的样式，实现平滑的进出场动画。
+
+小提示：
+
+这种写法可以让动画根据方向动态变化，常用于轮播图、页面切换等场景。
+如果你用的是 TypeScript，建议给 variants 添加类型声明以获得更好的类型检查。
+ */
 const variants = {
   enter: (direction: number) => ({
     y: direction > 0 ? 30 : -30,
